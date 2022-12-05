@@ -1,16 +1,18 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Categoria")
 public class Categoria {
+    @NonNull
     @PrimaryKey
     private String Nombre;
     private int ID;
 
-    public Categoria(String nombre, int ID) {
-        Nombre = nombre;
+    public Categoria(String Nombre, int ID) {
+        this.Nombre = Nombre;
         this.ID = ID;
     }
 
