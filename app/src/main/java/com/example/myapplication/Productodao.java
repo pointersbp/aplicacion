@@ -11,18 +11,18 @@ import java.util.List;
 @Dao
 public interface Productodao {
 
-    @Query("SELECT * FROM producto")
-    List<producto> getProducts();
+    @Query("SELECT * FROM Producto")
+    List<Producto> getProducts();
 
-    @Query("SELECT * FROM producto WHERE uuid Like :productID")
-    producto getProduct(String productID);
+    @Query("SELECT * FROM Producto WHERE uuid Like :productID")
+    Producto getProduct(String productID);
 
     @Insert
-    void insertProduct(producto aux);
+    void insertProduct(Producto aux);
 
     @Delete
-    void deleteProduct(producto aux);
+    void deleteProduct(Producto aux);
 
     @Update
-    void updateProduct(producto aux);
+    void updateProduct(Producto aux);
 }

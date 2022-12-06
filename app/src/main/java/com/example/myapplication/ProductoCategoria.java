@@ -10,5 +10,5 @@ public class ProductoCategoria {
             parentColumn = "ID",
             entityColumn = "CategoriaID"
     )
-    public List<producto> productos;
+    public List<Producto> Productos;
 }

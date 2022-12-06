@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Producto")
-public class producto {
+public class Producto {
     @PrimaryKey
     @NonNull
     private String uuid;
@@ -19,7 +19,7 @@ public class producto {
         return articulo;
     }
 
-    public producto (String uuid, String articulo, String descripcion, Integer precio){
+    public Producto(String uuid, String articulo, String descripcion, Integer precio){
         this.articulo = articulo;
         this.descripcion = descripcion;
         this.precio = precio;

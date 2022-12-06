@@ -14,14 +14,14 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     RecyclerView recyclerView;
-    public static ArrayList<producto> articulo = new ArrayList<producto>();
+    public static ArrayList<Producto> articulo = new ArrayList<Producto>();
     public static adapter layoutAdapter;
     LinearLayoutManager linearLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         for(int i=0; i < 5; i++){
-            producto aux = new producto("Producto " + i,"Producto " + i, "Producto " + i, i * 10);
+            Producto aux = new Producto("Producto " + i,"Producto " + i, "Producto " + i, i * 10);
             articulo.add(aux);
         }
 

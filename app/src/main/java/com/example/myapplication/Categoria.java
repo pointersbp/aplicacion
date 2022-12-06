@@ -10,10 +10,15 @@ public class Categoria {
     @PrimaryKey
     private String Nombre;
     private int ID;
+    private String Descripcion;
 
     public Categoria(String Nombre, int ID) {
         this.Nombre = Nombre;
         this.ID = ID;
+    }
+
+    public Categoria(String descripcion) {
+        Descripcion = descripcion;
     }
 
     public String getNombre() {
@@ -30,5 +35,13 @@ public class Categoria {
 
     public void setID(int ID) {
         this.ID = ID;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
     }
 }

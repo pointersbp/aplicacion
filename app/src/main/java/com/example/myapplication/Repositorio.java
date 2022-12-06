@@ -11,6 +11,7 @@ public class Repositorio {
 
     private Productodao productDao;
     private Categoriadao categoriadao;
+    private Usuariodao Usuariodao;
 
     private Repositorio(Context context){
         Context appContext = context.getApplicationContext();
@@ -19,6 +20,7 @@ public class Repositorio {
 
         productDao = database.Dao();
         categoriadao = database.CDao();
+        //UsuarioDao = database.UDao();
     }
 
     public static Repositorio get(Context context){
@@ -28,23 +30,23 @@ public class Repositorio {
         return repository;
     }
 
-    public List<producto> getProducts(){
+    public List<Producto> getProducts(){
         return productDao.getProducts();
     }
 
-    public producto getProduct(String uuid){
+    public Producto getProduct(String uuid){
         return productDao.getProduct(uuid);
     }
 
-    public void addProduct(producto product){
+    public void addProduct(Producto product){
         productDao.insertProduct(product);
     }
 
-    public void updateProduct(producto product){
+    public void updateProduct(Producto product){
         productDao.updateProduct(product);
     }
 
-    public void deleteProduct(producto product){
+    public void deleteProduct(Producto product){
         productDao.deleteProduct(product);
     }
 

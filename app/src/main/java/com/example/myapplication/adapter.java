@@ -15,9 +15,9 @@ import java.util.ArrayList;
 
 public class adapter extends RecyclerView.Adapter<adapter.ItemViewHolder> {
       private final Context context;
-      private final ArrayList<producto> articulos;
+      private final ArrayList<Producto> articulos;
 
-      public adapter(Context context, ArrayList<producto> courseModelArraylist){
+      public adapter(Context context, ArrayList<Producto> courseModelArraylist){
         this.context = context;
         this.articulos = courseModelArraylist;
       }
@@ -30,7 +30,7 @@ public class adapter extends RecyclerView.Adapter<adapter.ItemViewHolder> {
 
   @Override
   public void onBindViewHolder(@NonNull ItemViewHolder holder, @SuppressLint("RecyclerView") int position) {
-    producto articulo = articulos.get(position);
+    Producto articulo = articulos.get(position);
 
     holder.articulo.setText(articulo.getArticulo());
     holder.descripcion.setText(articulo.getDescripcion());
