@@ -2,8 +2,10 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity
 public class Direcciones {
     @PrimaryKey(autoGenerate = true)
     @NonNull
@@ -11,6 +13,7 @@ public class Direcciones {
 
     @ColumnInfo(name = "userID")
     private int userID;
+
 
     @ColumnInfo(name = "direccion")
     private String direccion;
@@ -35,12 +38,13 @@ public class Direcciones {
     public void setUserID(int userID) {
         this.userID = userID;
     }
-
-    public String getDirection() {
+    public String getDireccion() {
         return direccion;
     }
 
-    public void setDirection(String direction) {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+
 }

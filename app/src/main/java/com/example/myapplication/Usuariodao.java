@@ -22,9 +22,9 @@ public interface Usuariodao {
     @Update
     void updatetUser(Usuario aux);
 
-    /*
+
     @Query("SELECT * FROM Usuario WHERE userName LIKE :username")
-    UserWithDirections UsuarioProducto (String username);*/
+    DireccionUsuario UsuarioProducto (String username);
 
     @Query("SELECT * FROM Usuario WHERE id = :id")
     Usuario getUserWithBuys(int id);
