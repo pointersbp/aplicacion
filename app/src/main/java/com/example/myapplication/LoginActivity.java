@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Empty password", Toast.LENGTH_LONG).show();
             return;
         }
-
+    /*
         Usuario user = Usuariodao.authenticate(username, password);
 
         if(user == null){
@@ -81,6 +81,6 @@ public class LoginActivity extends AppCompatActivity {
             myEdit.apply();
 
             goLogin();
-        }
+        } */
     }
 }

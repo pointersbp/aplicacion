@@ -11,7 +11,7 @@ import com.example.myapplication.Usuario;
 @Dao
 public interface Usuariodao {
     @Query("SELECT * FROM Usuario WHERE userName like :username AND password LIKE :password")
-    static Usuario authenticate(String username, String password);
+    Usuario authenticate(String username, String password);
 
     @Insert
     void insertUser(Usuario aux);
