@@ -9,22 +9,26 @@ public class Producto {
     @PrimaryKey
     @NonNull
     private String uuid;
-    private String articulo;
-    private  String descripcion;
-    private Integer precio;
+    private String nombre;
+    private String descripcion;
+    private float precio;
+    private int id;
 
 
     private int CategoriaID;
-    public String getArticulo() {
-        return articulo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public Producto(String uuid, String articulo, String descripcion, Integer precio){
-        this.articulo = articulo;
+    public Producto(String uuid, String nombre, String descripcion, float precio){
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.uuid = uuid;
         this.CategoriaID = CategoriaID;
+    }
+    public Producto(int id) {
+        this.id = id;
     }
 
     public int getCategoriaID() {
@@ -34,8 +38,8 @@ public class Producto {
     public void setCategoriaID(int categoriaID) {
         CategoriaID = categoriaID;
     }
-    public void setArticulo(String articulo) {
-        this.articulo = articulo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDescripcion() {
@@ -46,11 +50,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public Integer getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Integer precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
@@ -61,6 +65,14 @@ public class Producto {
 
     public void setUuid(@NonNull String uuid) {
         this.uuid = uuid;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 

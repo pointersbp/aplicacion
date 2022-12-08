@@ -32,9 +32,9 @@ public class adapter extends RecyclerView.Adapter<adapter.ItemViewHolder> {
   public void onBindViewHolder(@NonNull ItemViewHolder holder, @SuppressLint("RecyclerView") int position) {
     Producto articulo = articulos.get(position);
 
-    holder.articulo.setText(articulo.getArticulo());
+    holder.articulo.setText(articulo.getNombre());
     holder.descripcion.setText(articulo.getDescripcion());
-    holder.precio.setText(articulo.getPrecio().toString());
+   // holder.precio.setText(articulo.getPrecio().toString());
 
     holder.borrar.setOnClickListener(new View.OnClickListener() {
       @Override

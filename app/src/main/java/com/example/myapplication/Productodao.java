@@ -25,4 +25,7 @@ public interface Productodao {
 
     @Update
     void updateProduct(Producto aux);
+
+    @Query("SELECT * FROM Producto WHERE nombre LIKE '%' || :name || '%'")
+    List<Producto> getProductsByName(String name);
 }
