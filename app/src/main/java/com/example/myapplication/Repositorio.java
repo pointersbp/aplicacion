@@ -1,5 +1,6 @@
 package com.example.myapplication;
 import android.annotation.SuppressLint;
+import android.app.Application;
 import android.content.Context;
 import androidx.room.Room;
 
@@ -15,10 +16,8 @@ public class Repositorio {
     private Registrodao registrodao;
     private Direcciondao direcciondao;
 
-    private Repositorio(Context context){
-        Context appContext = context.getApplicationContext();
-        ProductoDB database = Room.databaseBuilder(appContext, ProductoDB.class, "Temas")
-                .allowMainThreadQueries().build();
+    public Repositorio(Application application){
+        ProductoDB database = ProductoDB.getInstance(application);
 
         productDao = database.Dao();
         categoriadao = database.CDao();
@@ -27,11 +26,15 @@ public class Repositorio {
         direcciondao = database.DrDao();
     }
 
-    public static Repositorio get(Context context){
+    public static Repositorio get(Application application){
         if(repository == null){
-            repository = new Repositorio(context);
+            repository = new Repositorio(application);
         }
         return repository;
+    }
+
+    public Usuario autenticar(String username, String password){
+        return usuariodao.authenticate(username, password);
     }
 
     public List<Producto> getProducts(){

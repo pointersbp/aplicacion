@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private @NonNull ActivityLoginBinding binding;
     private TextView usernameTV, passwordTV;
+    private ViewModel viewModel;
 
 
 
@@ -40,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
 
         usernameTV = binding.emailLogin;
         passwordTV = binding.passLogin;
+        viewModel = new ViewModelProvider(this).get(ViewModel.class);
+
 
 
     }
@@ -66,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Empty password", Toast.LENGTH_LONG).show();
             return;
         }
-    /*
-        Usuario user = Usuariodao.authenticate(username, password);
 
+        Usuario user = viewModel.autenticar(username, password);
+        System.out.println("We found " + user);
         if(user == null){
             Toast.makeText(this, "Incorrect username or password", Toast.LENGTH_LONG).show();
             return;
@@ -80,7 +84,6 @@ public class LoginActivity extends AppCompatActivity {
             myEdit.putString("userName", user.getUserName());
             myEdit.apply();
 
-            goLogin();
-        } */
-    }
-}
+
+        }
+}}
