@@ -20,14 +20,12 @@ public class Producto {
         return nombre;
     }
 
-    public Producto(String uuid, String nombre, String descripcion, float precio){
+    public Producto(String uuid, String nombre, String descripcion, float precio, int id){
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.uuid = uuid;
         this.CategoriaID = CategoriaID;
-    }
-    public Producto(int id) {
         this.id = id;
     }
 
