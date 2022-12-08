@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         for(int i=0; i < 5; i++){
-            Producto aux = new Producto("Producto" + i,"Producto " + i,"Producto " + i, i, i * 10);
+            Producto aux = new Producto("Producto " + i,"Producto " + i, "Producto " + i, i * 10);
             articulo.add(aux);
         }
 
