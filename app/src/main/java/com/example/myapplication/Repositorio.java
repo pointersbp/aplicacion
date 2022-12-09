@@ -40,10 +40,11 @@ public class Repositorio {
     public Usuario UsuarioProducto (String username){
         return usuariodao.UsuarioProducto(username);
     }
+   /*
     public Usuario UsuarioEmail (String email){
         return usuariodao.UsuarioEmail(email);
     }
-
+*/
     public void addUser(Usuario user){
         usuariodao.insertUser(user);
     }

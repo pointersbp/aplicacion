@@ -46,9 +46,9 @@ public class ViewModel extends AndroidViewModel {
     public Usuario UsuarioProducto(String username) {
         return repository.UsuarioProducto(username);
     }
-
+/*
     public Usuario UsuarioEmail(String email) {
         return repository.UsuarioEmail(email);
     }
-
+*/
 }

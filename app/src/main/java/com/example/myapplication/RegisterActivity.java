@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         Usuario user = viewModel.UsuarioProducto(username);
-        Usuario user2 = viewModel.UsuarioEmail(email);
+       // Usuario user2 = viewModel.UsuarioEmail(email);
 
         if(user.getUserName().toString().equals(username)){
             Toast.makeText(this, "Another account exists with the same username", Toast.LENGTH_LONG).show();
@@ -87,10 +87,18 @@ public class RegisterActivity extends AppCompatActivity {
         }  else {
             //Save userID using shared preference to be access from anywhere in the app
             viewModel.agregarUsuario(new Usuario(username, password1, email, contact));
+            System.out.println(username.toString());
+            System.out.println(password1.toString());
+            System.out.println(email.toString());
+            System.out.println(contact.toString());
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
 
+
+
         }
+
+
 
 
 
