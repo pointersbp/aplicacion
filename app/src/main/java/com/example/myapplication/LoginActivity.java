@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             myEdit.putInt("userID", user.getId());
             myEdit.putString("userName", user.getUserName());
             myEdit.apply();
-
+            goLogin();
 
         }
 }}

@@ -37,6 +37,19 @@ public class Repositorio {
         return usuariodao.authenticate(username, password);
     }
 
+    public Usuario UsuarioProducto (String username){
+        return usuariodao.UsuarioProducto(username);
+    }
+    public Usuario UsuarioEmail (String email){
+        return usuariodao.UsuarioEmail(email);
+    }
+
+    public void addUser(Usuario user){
+        usuariodao.insertUser(user);
+    }
+
+
+
     public List<Producto> getProducts(){
         return productDao.getProducts();
     }

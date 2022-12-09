@@ -23,6 +23,10 @@ public class ViewModel extends AndroidViewModel {
         return repository.autenticar(username, password);
     }
 
+    public void agregarUsuario(Usuario usuario) {
+        repository.addUser(usuario);
+    }
+
     public Producto getProduct(String uuid){
         return repository.getProduct(uuid);
     }
@@ -38,4 +42,13 @@ public class ViewModel extends AndroidViewModel {
     }
 
     public ProductoCategoria getCategoryWithProducts(int id) {return repository.getCategoryWithProducts(id);}
+
+    public Usuario UsuarioProducto(String username) {
+        return repository.UsuarioProducto(username);
+    }
+
+    public Usuario UsuarioEmail(String email) {
+        return repository.UsuarioEmail(email);
+    }
+
 }

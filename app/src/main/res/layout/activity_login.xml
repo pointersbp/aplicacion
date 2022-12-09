@@ -84,5 +84,6 @@
         android:background="@null"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:onClick="loadRegister"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
