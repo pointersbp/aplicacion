@@ -26,8 +26,8 @@ public interface Usuariodao {
     @Query("SELECT * FROM Usuario WHERE userName LIKE :username")
     Usuario UsuarioProducto (String username);
 
-    @Query("SELECT * FROM Usuario WHERE email LIKE :email")
-    Usuario UsuarioEmail (String username);
+    /*@Query("SELECT * FROM Usuario WHERE email LIKE :email")
+    Usuario UsuarioEmail (String username);*/
 
     @Query("SELECT * FROM Usuario WHERE id = :id")
     Usuario getUserWithBuys(int id);

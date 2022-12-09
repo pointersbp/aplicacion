@@ -84,11 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
         if(user.getUserName().toString().equals(username)){
             Toast.makeText(this, "Another account exists with the same username", Toast.LENGTH_LONG).show();
             return;
-        } else if(user.getEmail().toString().equals(email)) {
-            Toast.makeText(this, "Another account exists from the same email exists", Toast.LENGTH_LONG).show();
-            return;
-        }
-        else {
+        }  else {
             //Save userID using shared preference to be access from anywhere in the app
             viewModel.agregarUsuario(new Usuario(username, password1, email, contact));
             Intent intent = new Intent(this, LoginActivity.class);
